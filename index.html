@@ -1,59 +1,84 @@
 <!doctype html>
+<p class="lead">Privacy-first Chrome extension to detect AI-generated images and save images with AI-generated descriptions. All analysis is performed locally.</p>
+</div>
+</header>
+
+
+<section class="hero">
+<div>
+<div class="card">
+<h2>Overview</h2>
+<p class="meta">AI Image Analyzer helps you evaluate images quickly and privately. Use the right-click menu on any image in Chrome to:</p>
+<ul>
+<li><strong>Check for AI generation</strong> — produces a confidence score, concise reasoning, and indicators.</li>
+<li><strong>Save with description</strong> — download the image with an AI-generated caption that includes objects, scene type, and mood.</li>
+<li><strong>Local-first processing</strong> — image analysis runs in your browser; no uploads to external servers.</li>
 </ul>
 
 
 <div class="features">
-<div class="feature"><strong>Context menu</strong><div class="meta">Right-click & use the menu options.</div></div>
-<div class="feature"><strong>History</strong><div class="meta">Browse recent checks and saved images (local only).</div></div>
-<div class="feature"><strong>Settings</strong><div class="meta">Customize filename, include date, and resize options.</div></div>
-<div class="feature"><strong>Privacy-first</strong><div class="meta">No remote uploads — fully local analysis.</div></div>
+<div class="feature"><strong>Context menu</strong><div class="meta">Convenient right-click actions for images.</div></div>
+<div class="feature"><strong>Local history</strong><div class="meta">Recent checks and saves stored on your device (max 50 entries).</div></div>
+<div class="feature"><strong>Custom filenames</strong><div class="meta">Auto-naming with optional date prefix and sanitized objects.</div></div>
+<div class="feature"><strong>Lightweight analysis</strong><div class="meta">Offscreen worker + optional Chrome AI fallback for robust detection.</div></div>
 </div>
 
 
 <div class="actions">
-<a class="button" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Get on Chrome Web Store</a>
+<a class="button" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Install on Chrome</a>
 <a class="button ghost" href="privacy_policy.html">Privacy Policy</a>
 </div>
 </div>
 
 
 <div style="margin-top:18px" class="card">
-<h3>Technical notes</h3>
-<p class="meta">Uses Chrome's local AI APIs where available and a lightweight worker for pixel-level analysis (noise, ELA approximation, TFJS model).</p>
-<pre style="background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f7;overflow:auto">Permissions: <code>storage</code>, <code>downloads</code>, <code>contextMenus</code>, <code>scripting</code>, <code>notifications</code> — plus image-only host permissions.</pre>
+<h3>Technical summary</h3>
+<p class="meta">The extension uses a combination of pixel-level heuristics (approximate ELA, noise variance) and a small client-side model where available. It leverages Chrome's <code>activeTab</code> permission and context menu user gestures to access images securely.</p>
+<pre>Permissions: storage, downloads, contextMenus, scripting, notifications, activeTab
+Host access: temporary per-user gesture (activeTab) — no broad host permissions</pre>
 </div>
 </div>
 
 
 <aside style="width:100%">
 <div class="card">
-<h3>Quick demo</h3>
-<p class="meta">(Screenshots or GIFs go here)</p>
+<h3>Demo & Screenshots</h3>
+<p class="meta">Add screenshots or a short GIF that demonstrates the extension workflow (right-click → analyze / save).</p>
 <div style="height:200px;border-radius:8px;background:linear-gradient(180deg,#f1f5f9,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);">Demo placeholder</div>
 </div>
 
 
 <div class="card" style="margin-top:12px">
-<h4>Support</h4>
-<p class="meta">Questions or issues? Contact: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a></p>
-<p class="meta">Source & repo: <a href="#">(Add your GitHub repo link)</a></p>
+<h4>Support & Contact</h4>
+<p class="meta">For support, bug reports, or feedback, email: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a></p>
+<p class="meta">GitHub: <a href="#">(Add repository URL)</a></p>
 </div>
 </aside>
 </section>
 
 
 <section style="margin-top:28px">
-<h2>Installation & usage</h2>
+<h2>How to use</h2>
 <ol>
-<li>Install from Chrome Web Store.</li>
-<li>Right-click any image and choose an action (Check for AI Generation / Save Image with AI Description).</li>
-<li>Open the extension popup to view history and change settings.</li>
+<li>Install the extension from the Chrome Web Store.</li>
+<li>Right-click any image and choose <em>"Check for AI Generation"</em> or <em>"Save Image with AI Description"</em>.</li>
+<li>Open the extension popup to view local history and change settings (resize, include date).</li>
 </ol>
 </section>
 
 
+<section style="margin-top:18px">
+<h2>Security & privacy highlights</h2>
+<ul>
+<li>No telemetry or analytics.</li>
+<li>All image analysis runs locally; nothing is uploaded to remote servers.</li>
+<li>Minimal permissions — uses <code>activeTab</code> to access images only after an explicit user action.</li>
+</ul>
+</section>
+
+
 <footer>
-<div class="meta">Made with privacy-first principles. © <span id="year"></span> AI Image Analyzer. <a href="privacy_policy.html">Privacy Policy</a></div>
+<div class="meta">© <span id="year"></span> AI Image Analyzer — Privacy-first image insights. <a href="privacy_policy.html">Privacy Policy</a></div>
 </footer>
 </div>
 
