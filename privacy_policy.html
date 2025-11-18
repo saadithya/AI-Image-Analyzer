@@ -1,4 +1,12 @@
 <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Privacy Policy — AI Image Analyzer</title>
+<meta name="description" content="Privacy policy for AI Image Analyzer Chrome extension. Local-first, no data collection, minimal permissions." />
+<link rel="icon" href="/icons/icon.png" />
+<style>
 body{font-family:Inter,system-ui,Arial;color:#0f172a;background:#fff;margin:0;padding:0}
 .container{max-width:900px;margin:36px auto;padding:24px}
 h1,h2{color:#0b1220}
@@ -11,67 +19,54 @@ pre{background:#f8fafc;padding:12px;border-radius:8px;border:1px solid #eef2f7}
 <body>
 <div class="container">
 <h1>Privacy Policy</h1>
-<p class="small">Last updated: <strong><!--DATE--> </strong></p>
+<p class="small">Last updated: <strong>February 2025</strong></p>
 
 
-<p>Thank you for using <strong>AI Image Analyzer</strong> (the “Extension”). We built this Extension with a strong commitment to privacy. This policy explains what data (if any) we collect, why we collect it, how it is stored, and the controls you have.</p>
+<p>AI Image Analyzer ("we", "our", "the Extension") is committed to safeguarding your privacy. This Privacy Policy explains how the extension operates, what information it accesses, and how that information is handled.</p>
 
 
 <h2>Summary</h2>
 <ul>
-<li><strong>No personal data collection:</strong> The Extension does not collect personal information or telemetry.</li>
-<li><strong>Local processing:</strong> Image analysis and caption generation occur on your device—no images or content are uploaded to our servers.</li>
-<li><strong>Permissions:</strong> The Extension requests only minimal permissions required for functionality. See details below.</li>
+<li><strong>No personal data collected</strong> — The extension does not collect, transmit, or store personal data.</li>
+<li><strong>Local-only image processing</strong> — Images are analyzed directly in your browser; no image is uploaded to any server.</li>
+<li><strong>Minimal permissions</strong> — We only use permissions essential to provide the extension features.</li>
 </ul>
 
 
-<h2>What data the Extension accesses</h2>
-<p>The extension accesses only the image the user chooses to analyze (via right-click context menu). It also stores small user settings and a local history of recent actions in the browser storage. Specific items:</p>
+<h2>Information the Extension Accesses</h2>
 <ul>
-<li><strong>Image data</strong> — The image you right-click is fetched for local analysis and/or for packaging into a downloaded file if you choose “Save with AI Description.” This is processed locally and not sent anywhere.</li>
-<li><strong>Local settings</strong> — Settings such as image resize dimensions and whether to prefix filenames with the date are stored locally using Chrome <code>chrome.storage</code>.</li>
-<li><strong>History</strong> — A short local history of recent image checks and saves (max 50 entries) is stored in local storage so the popup can show recent activity. This history is stored only on your device.</li>
+<li><strong>Image Data:</strong> When you right-click an image and select an action, the extension fetches that image for local processing. The image is not transmitted elsewhere.</li>
+<li><strong>Local Settings:</strong> Preferences such as resize options and filename formatting are stored using Chrome's <code>storage</code> API.</li>
+<li><strong>Local Activity History:</strong> A short history of your recent analyses (up to 50 entries) is stored locally so you can review previous actions through the extension popup.</li>
 </ul>
 
 
-<h2>Permissions & why they are required</h2>
+<h2>Permissions Used</h2>
 <pre>
-storage — Store extension settings and local history (local device only)
-downloads — Save image files to the user's Downloads folder
-contextMenus — Add right-click menu entries for images
-scripting — Inject a small content script when required for pixel-level analysis
-notifications — Notify users when analyses complete or files are saved
-host_permissions — Limited to common image file types (jpg, png, webp, jpeg) to fetch the image the user selects
+storage — Save user settings and local history.
+downloads — Save AI-described images to your device.
+contextMenus — Provide right-click options on images.
+scripting — Inject small content scripts for pixel-level analysis.
+notifications — Display results and completion messages.
+activeTab — Temporary access to the tab after a user gesture.
 </pre>
 
 
-<h2>Do we transmit data off your device?</h2>
-<p>No. The Extension does not upload images, content, or usage data to external servers. All analysis is performed locally using the browser's capabilities (Chrome AI APIs where available and a local Web Worker). We do not collect analytics or crash reports.</p>
+<h2>Data Sharing & Transmission</h2>
+<p>We do <strong>not</strong> send any data to external servers. No analytics, no tracking, no remote processing. All logic runs inside your browser using Web Workers and optional Chrome on-device AI APIs.</p>
 
 
-<h2>Third-party services</h2>
-<p>The extension loads a publicly-hosted TensorFlow.js model for client-side inference (if available) and may load TFJS runtime from a CDN inside the worker to perform local analysis. These requests are only used to fetch necessary code/models and are not tied to your identity. If you prefer, you can host the TFJS resources locally in the extension package to avoid CDN requests.</p>
+<h2>Third-Party Code Resources</h2>
+<p>The extension may load client-side libraries such as TensorFlow.js for local inference. These libraries are static code files and do not collect or send user data. You may alternatively bundle these files locally if self-hosting.</p>
 
 
-<h2>Your choices and rights</h2>
+<h2>Your Rights & Controls</h2>
 <ul>
-<li>You can clear the local history from the extension popup ("Clear History").</li>
-<li>You can remove or disable the extension at any time via Chrome's Extensions page.</li>
-<li>Because no personal data is collected, there are no data export or deletion requests related to external servers.</li>
+<li>You can clear your local history anytime using the "Clear History" button.</li>
+<li>You can disable or uninstall the extension at any time.</li>
+<li>The extension performs no external storage, so no data export requests are applicable.</li>
 </ul>
 
 
-<h2>Security</h2>
-<p>We follow best practices to minimize risks: minimal permissions, local-only processing, and no remote storage of user images. However, please note that downloaded files written to your filesystem are subject to your operating system's security and permissions.</p>
-
-
-<h2>Children</h2>
-<p>The Extension is not designed for children under 13. We do not knowingly collect information from children.</p>
-
-
-<h2>Changes to this privacy policy</h2>
-<p>We may update this policy from time to time. When we do, we will update the "Last updated" date at the top of this page.</p>
-
-
-<h2>Contact</h2>
-<p>If y
+<h2>Security Measures</h2>
+<p>The extension follows privacy-by-design principles: minimized permissions, no remote data transfer, and complete local execution. Files downloaded to your device follow your system
