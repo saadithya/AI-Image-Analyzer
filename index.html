@@ -1,0 +1,65 @@
+<!doctype html>
+</ul>
+
+
+<div class="features">
+<div class="feature"><strong>Context menu</strong><div class="meta">Right-click & use the menu options.</div></div>
+<div class="feature"><strong>History</strong><div class="meta">Browse recent checks and saved images (local only).</div></div>
+<div class="feature"><strong>Settings</strong><div class="meta">Customize filename, include date, and resize options.</div></div>
+<div class="feature"><strong>Privacy-first</strong><div class="meta">No remote uploads — fully local analysis.</div></div>
+</div>
+
+
+<div class="actions">
+<a class="button" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Get on Chrome Web Store</a>
+<a class="button ghost" href="privacy_policy.html">Privacy Policy</a>
+</div>
+</div>
+
+
+<div style="margin-top:18px" class="card">
+<h3>Technical notes</h3>
+<p class="meta">Uses Chrome's local AI APIs where available and a lightweight worker for pixel-level analysis (noise, ELA approximation, TFJS model).</p>
+<pre style="background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f7;overflow:auto">Permissions: <code>storage</code>, <code>downloads</code>, <code>contextMenus</code>, <code>scripting</code>, <code>notifications</code> — plus image-only host permissions.</pre>
+</div>
+</div>
+
+
+<aside style="width:100%">
+<div class="card">
+<h3>Quick demo</h3>
+<p class="meta">(Screenshots or GIFs go here)</p>
+<div style="height:200px;border-radius:8px;background:linear-gradient(180deg,#f1f5f9,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);">Demo placeholder</div>
+</div>
+
+
+<div class="card" style="margin-top:12px">
+<h4>Support</h4>
+<p class="meta">Questions or issues? Contact: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a></p>
+<p class="meta">Source & repo: <a href="#">(Add your GitHub repo link)</a></p>
+</div>
+</aside>
+</section>
+
+
+<section style="margin-top:28px">
+<h2>Installation & usage</h2>
+<ol>
+<li>Install from Chrome Web Store.</li>
+<li>Right-click any image and choose an action (Check for AI Generation / Save Image with AI Description).</li>
+<li>Open the extension popup to view history and change settings.</li>
+</ol>
+</section>
+
+
+<footer>
+<div class="meta">Made with privacy-first principles. © <span id="year"></span> AI Image Analyzer. <a href="privacy_policy.html">Privacy Policy</a></div>
+</footer>
+</div>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
